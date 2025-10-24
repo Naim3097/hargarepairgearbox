@@ -74,6 +74,13 @@ p {
     margin: 0 auto;
 }
 
+.hero-logo {
+    max-width: 120px;
+    height: auto;
+    margin: 0 auto var(--spacing-md);
+    display: block;
+}
+
 .hero-subtitle {
     font-size: 1.125rem;
     margin-bottom: var(--spacing-md);
@@ -702,6 +709,11 @@ p {
         padding: var(--spacing-lg) 0;
     }
     
+    .hero-logo {
+        max-width: 100px;
+        margin-bottom: var(--spacing-sm);
+    }
+    
     .hero-subtitle {
         font-size: 1rem;
     }
@@ -775,13 +787,25 @@ p {
         font-size: 2rem;
     }
     
+    .sticky-cta {
+        padding: 10px 0;
+    }
+    
     .sticky-cta .container {
         flex-direction: column;
         text-align: center;
+        gap: 8px;
+    }
+    
+    .sticky-cta p {
+        font-size: 0.875rem;
+        line-height: 1.3;
     }
     
     .sticky-cta .cta-primary-small {
         width: 100%;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
     
     .whatsapp-float {
