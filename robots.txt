@@ -1,0 +1,27 @@
+# robots.txt for hargarepairgearbox.com
+# Generated: 2025-11-20
+
+User-agent: *
+Allow: /
+
+# Disallow admin/temp areas if any exist in future
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /*.php$
+
+# Allow important resources
+Allow: /asset/
+Allow: /pages/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+
+# Sitemap location
+Sitemap: https://hargarepairgearbox.com/sitemap.xml
+
+# Crawl-delay for good citizenship
+Crawl-delay: 1

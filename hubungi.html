@@ -20,12 +20,33 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">HargaRepairGearbox.com</a>
-            <div class="nav-links">
+            <a href="index.html" class="logo"></a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
                 <a href="index.html">Utama</a>
-                <a href="harga-overhaul-gearbox.html">Harga</a>
-                <a href="semak-harga.html">Semak Harga</a>
-                <a href="hubungi.html" class="active">Hubungi</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+                        Model Kereta
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="pages/brands/perodua.html">Perodua</a>
+                        <a href="pages/brands/proton.html">Proton</a>
+                        <a href="pages/brands/honda.html">Honda</a>
+                        <a href="pages/brands/toyota.html">Toyota</a>
+                        <a href="pages/brands/nissan.html">Nissan</a>
+                        <a href="pages/brands/bmw.html">BMW</a>
+                        <a href="pages/brands/mercedes.html">Mercedes-Benz</a>
+                        <a href="pages/brands/volkswagen.html">Volkswagen</a>
+                    </div>
+                </div>
+                <a href="blog.html">Blog</a>
             </div>
         </div>
     </nav>
@@ -224,9 +245,7 @@
             <p>&copy; 2025 HargaRepairGearbox.com — Powered by One X Transmission</p>
             <div class="footer-links">
                 <a href="index.html">Utama</a>
-                <a href="harga-overhaul-gearbox.html">Harga</a>
-                <a href="semak-harga.html">Semak Harga</a>
-                <a href="hubungi.html">Hubungi</a>
+                <a href="blog.html">Blog</a>
             </div>
         </div>
     </footer>

@@ -1,3 +1,32 @@
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+}
+
+// Dropdown toggle for mobile
+function toggleDropdown(event) {
+    event.preventDefault();
+    const dropdown = event.target.closest('.nav-dropdown');
+    dropdown.classList.toggle('active');
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    
+    if (navLinks && !navbar.contains(event.target)) {
+        navLinks.classList.remove('active');
+        if (menuToggle) {
+            menuToggle.classList.remove('active');
+        }
+    }
+});
+
 // Smooth scroll to form
 function scrollToForm() {
     const form = document.getElementById('quotation-form');
@@ -90,6 +119,86 @@ function handleFormSubmit(event) {
                 'car_brand': formData.carBrand
             });
         }
+    }, 2000);
+    
+    return false;
+}
+
+// Handle brand form submission
+function handleBrandFormSubmit(event) {
+    event.preventDefault();
+    
+    const formData = {
+        carModel: document.getElementById('brandCarModel').value,
+        problem: document.getElementById('brandProblem').value,
+        location: document.getElementById('brandLocation').value
+    };
+    
+    // Track conversion event
+    if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', {
+            content_name: 'Brand Page Quotation',
+            content_category: 'Lead Form'
+        });
+    }
+    
+    // Create WhatsApp message
+    const whatsappMessage = `Salam, saya nak semak harga repair gearbox:\n\n` +
+        `🚗 Kereta: ${formData.carModel}\n` +
+        `❌ Masalah: ${formData.problem}\n` +
+        `📍 Lokasi: ${formData.location || 'Tidak dinyatakan'}\n\n` +
+        `Boleh bagi anggaran harga & punca masalah?`;
+    
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappURL = `https://wa.me/60102020723?text=${encodedMessage}`;
+    
+    // Show success message
+    document.getElementById('brandForm').style.display = 'none';
+    document.getElementById('successMessage').style.display = 'block';
+    
+    // Open WhatsApp after 2 seconds
+    setTimeout(() => {
+        window.open(whatsappURL, '_blank');
+    }, 2000);
+    
+    return false;
+}
+
+// Handle blog form submission
+function handleBlogFormSubmit(event) {
+    event.preventDefault();
+    
+    const formData = {
+        carModel: document.getElementById('blogCarModel').value,
+        problem: document.getElementById('blogProblem').value,
+        location: document.getElementById('blogLocation').value
+    };
+    
+    // Track conversion event
+    if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', {
+            content_name: 'Blog Page Quotation',
+            content_category: 'Lead Form'
+        });
+    }
+    
+    // Create WhatsApp message
+    const whatsappMessage = `Salam, saya nak semak harga repair gearbox:\n\n` +
+        `🚗 Kereta: ${formData.carModel}\n` +
+        `❌ Masalah: ${formData.problem}\n` +
+        `📍 Lokasi: ${formData.location || 'Tidak dinyatakan'}\n\n` +
+        `Boleh bagi anggaran harga & punca masalah?`;
+    
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappURL = `https://wa.me/60102020723?text=${encodedMessage}`;
+    
+    // Show success message
+    document.getElementById('blogForm').style.display = 'none';
+    document.getElementById('blogSuccessMessage').style.display = 'block';
+    
+    // Open WhatsApp after 2 seconds
+    setTimeout(() => {
+        window.open(whatsappURL, '_blank');
     }, 2000);
     
     return false;

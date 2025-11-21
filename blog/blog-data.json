@@ -1,0 +1,114 @@
+{
+  "posts": [
+    {
+      "id": "cara-maintain-gearbox-cvt",
+      "title": "Cara Maintain Gearbox CVT Supaya Tahan Lama",
+      "slug": "cara-maintain-gearbox-cvt",
+      "excerpt": "Gearbox CVT lebih sensitif berbanding auto biasa. Ikuti 7 tips mudah ini untuk pastikan CVT kereta anda tahan hingga 200,000km tanpa masalah.",
+      "category": "Maintenance",
+      "author": "One X Transmission",
+      "date": "2025-11-15",
+      "readTime": "5 min",
+      "image": "../asset/general-images/Servis Minyak Gearbox.png",
+      "featured": true,
+      "tags": ["CVT", "Maintenance", "Honda", "Perodua", "Nissan"]
+    },
+    {
+      "id": "tanda-gearbox-nak-rosak",
+      "title": "5 Tanda Gearbox Kereta Anda Nak Rosak",
+      "slug": "tanda-gearbox-nak-rosak",
+      "excerpt": "Jangan tunggu gearbox rosak total! Kenali 5 tanda awal ini dan jimat ribuan ringgit kos repair. Termasuk checklist percuma untuk diagnosis sendiri.",
+      "category": "Diagnosis",
+      "author": "One X Transmission",
+      "date": "2025-11-10",
+      "readTime": "6 min",
+      "image": "../asset/general-images/Diagnosis Gearbox.jpeg",
+      "featured": true,
+      "tags": ["Diagnosis", "Preventive", "Symptoms"]
+    },
+    {
+      "id": "bila-tukar-minyak-gearbox",
+      "title": "Bila Perlu Tukar Minyak Gearbox? Panduan Lengkap 2025",
+      "slug": "bila-tukar-minyak-gearbox",
+      "excerpt": "Minyak gearbox lifetime? MITOS! Ketahui jadual servis yang betul untuk CVT, auto & manual. Termasuk harga dan jenis minyak untuk setiap model.",
+      "category": "Maintenance",
+      "author": "One X Transmission",
+      "date": "2025-11-05",
+      "readTime": "7 min",
+      "image": "../asset/general-images/Servis Minyak Gearbox.png",
+      "featured": false,
+      "tags": ["ATF", "Maintenance", "Service Interval"]
+    },
+    {
+      "id": "perbezaan-cvt-vs-auto",
+      "title": "CVT vs Auto Biasa: Mana Lebih Bagus & Tahan Lama?",
+      "slug": "perbezaan-cvt-vs-auto",
+      "excerpt": "Nak beli kereta baru tapi keliru antara CVT dan auto biasa? Kami bandingkan kos servis, durability, dan performance untuk bantu anda decide.",
+      "category": "Education",
+      "author": "One X Transmission",
+      "date": "2025-11-01",
+      "readTime": "8 min",
+      "image": "../asset/general-images/Overhaul Gearbox.jpeg",
+      "featured": false,
+      "tags": ["CVT", "Automatic", "Comparison", "Buying Guide"]
+    },
+    {
+      "id": "harga-overhaul-vs-recon",
+      "title": "Overhaul vs Recon Gearbox: Mana Lagi Jimat?",
+      "slug": "harga-overhaul-vs-recon",
+      "excerpt": "Gearbox rosak? Pilih overhaul atau beli recon? Ketahui perbezaan harga, warranty & risiko. Termasuk calculator untuk bantu anda pilih yang terbaik.",
+      "category": "Pricing",
+      "author": "One X Transmission",
+      "date": "2025-10-28",
+      "readTime": "6 min",
+      "image": "../asset/general-images/Overhaul Gearbox.jpeg",
+      "featured": false,
+      "tags": ["Pricing", "Overhaul", "Recon", "Decision Guide"]
+    },
+    {
+      "id": "masalah-gearbox-myvi",
+      "title": "Masalah Gearbox Myvi Yang Paling Biasa & Cara Atasi",
+      "slug": "masalah-gearbox-myvi",
+      "excerpt": "Myvi adalah kereta paling popular di Malaysia, tapi ada beberapa common issue dengan gearbox auto. Ketahui masalah biasa dan harga repair.",
+      "category": "Car Specific",
+      "author": "One X Transmission",
+      "date": "2025-10-25",
+      "readTime": "7 min",
+      "image": "../asset/general-images/Diagnosis Gearbox.jpeg",
+      "featured": true,
+      "tags": ["Perodua", "Myvi", "Common Issues", "Auto Gearbox"]
+    }
+  ],
+  "categories": [
+    {
+      "name": "Maintenance",
+      "slug": "maintenance",
+      "count": 2,
+      "description": "Tips servis dan maintenance gearbox"
+    },
+    {
+      "name": "Diagnosis",
+      "slug": "diagnosis",
+      "count": 2,
+      "description": "Cara diagnose masalah gearbox"
+    },
+    {
+      "name": "Education",
+      "slug": "education",
+      "count": 1,
+      "description": "Panduan dan pengetahuan gearbox"
+    },
+    {
+      "name": "Pricing",
+      "slug": "pricing",
+      "count": 1,
+      "description": "Harga dan kos repair gearbox"
+    },
+    {
+      "name": "Car Specific",
+      "slug": "car-specific",
+      "count": 1,
+      "description": "Panduan mengikut model kereta"
+    }
+  ]
+}

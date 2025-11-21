@@ -75,12 +75,33 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">HargaRepairGearbox.com</a>
-            <div class="nav-links">
+            <a href="index.html" class="logo"></a>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
                 <a href="index.html">Utama</a>
-                <a href="harga-overhaul-gearbox.html">Harga</a>
-                <a href="semak-harga.html">Semak Harga</a>
-                <a href="hubungi.html">Hubungi</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+                        Model Kereta
+                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="pages/brands/perodua.html">Perodua</a>
+                        <a href="pages/brands/proton.html">Proton</a>
+                        <a href="pages/brands/honda.html">Honda</a>
+                        <a href="pages/brands/toyota.html">Toyota</a>
+                        <a href="pages/brands/nissan.html">Nissan</a>
+                        <a href="pages/brands/bmw.html">BMW</a>
+                        <a href="pages/brands/mercedes.html">Mercedes-Benz</a>
+                        <a href="pages/brands/volkswagen.html">Volkswagen</a>
+                    </div>
+                </div>
+                <a href="blog.html">Blog</a>
             </div>
         </div>
     </nav>
@@ -367,18 +388,13 @@
             <p>&copy; 2025 HargaRepairGearbox.com — Powered by One X Transmission</p>
             <div class="footer-links">
                 <a href="index.html">Utama</a>
-                <a href="harga-overhaul-gearbox.html">Harga</a>
-                <a href="semak-harga.html">Semak Harga</a>
-                <a href="hubungi.html">Hubungi</a>
+                <a href="blog.html">Blog</a>
             </div>
         </div>
     </footer>
 
     <a href="https://wa.me/60102020723" class="whatsapp-float" target="_blank" onclick="trackWhatsAppClick()">
-        <svg width="60" height="60" viewBox="0 0 60 60">
-            <circle cx="30" cy="30" r="30" fill="#25D366"/>
-            <path d="M30,15 C21.7,15 15,21.7 15,30 C15,32.6 15.7,35.1 16.9,37.3 L15,45 L22.9,43.1 C25,44.2 27.4,44.8 30,44.8 C38.3,44.8 45,38.1 45,29.8 C45,25.8 43.4,22.1 40.6,19.3 C37.9,16.6 34.1,15 30,15 Z M35.3,34.1 C35,34.3 34.6,34.4 34.2,34.6 C33.8,34.8 33.4,34.9 33,34.9 C32.3,34.9 31.5,34.7 30.7,34.1 C29.9,33.5 29.1,32.8 28.4,32 C27.7,31.2 27,30.3 26.5,29.4 C26,28.5 25.7,27.7 25.7,27 C25.7,26.5 25.8,26 26.1,25.6 C26.4,25.2 26.8,25 27.3,25 C27.5,25 27.7,25 27.9,25 C28.1,25 28.3,25 28.5,25.5 C28.7,26 29.2,27.1 29.3,27.3 C29.4,27.5 29.4,27.7 29.3,27.9 C29.2,28.1 29.1,28.3 28.9,28.5 C28.7,28.7 28.5,28.9 28.4,29 C28.2,29.2 28,29.4 28.2,29.7 C28.4,30 29.1,31.1 30.1,32 C31.4,33.1 32.5,33.5 32.8,33.6 C33.1,33.7 33.3,33.7 33.5,33.4 C33.7,33.1 34.2,32.5 34.4,32.2 C34.6,31.9 34.9,32 35.2,32.1 L36.9,32.9 C37.2,33 37.4,33.1 37.5,33.2 C37.6,33.4 37.6,33.9 37.4,34.5 C37.2,35.1 36.1,35.7 35.3,34.1 Z" fill="white"/>
-        </svg>
+        <span>WhatsApp Kami</span>
     </a>
 
     <script src="script.js"></script>
