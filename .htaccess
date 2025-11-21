@@ -1,0 +1,27 @@
+# Enable URL Rewriting
+RewriteEngine On
+RewriteBase /
+
+# Remove .html extension and redirect to clean URL
+RewriteCond %{THE_REQUEST} ^GET\ /(.*)\.html\ HTTP
+RewriteRule (.*)\.html$ /$1 [R=301,L]
+
+# Add .html extension internally if file exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Brand page URL rewriting - /honda -> /pages/brands/honda.html
+RewriteRule ^(honda|toyota|nissan|perodua|proton|bmw|mercedes|volkswagen)$ /pages/brands/$1.html [L]
+
+# Blog post URL rewriting - /blog/post-name -> /blog/posts/post-name.html
+RewriteRule ^blog/([a-z0-9\-]+)$ /blog/posts/$1.html [L]
+
+# Force HTTPS (optional - enable if you have SSL)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Force www (optional - enable if you want www prefix)
+# RewriteCond %{HTTP_HOST} !^www\.
+# RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

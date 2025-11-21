@@ -23,6 +23,11 @@ document.addEventListener('click', function(event) {
     const navLinks = document.getElementById('navLinks');
     const menuToggle = document.querySelector('.mobile-menu-toggle');
     
+    // Don't close menu when clicking FAQ items
+    if (event.target.closest('.faq-item')) {
+        return;
+    }
+    
     if (navLinks && !navbar.contains(event.target)) {
         navLinks.classList.remove('active');
         if (menuToggle) {
