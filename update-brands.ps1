@@ -20,10 +20,10 @@ foreach ($brand in $brands) {
     $content = Get-Content $file -Raw -Encoding UTF8
     
     # Update service buttons
-    $content = $content -replace "href=`"https://wa\.me/60102020723\?text=Saya%20nak%20tanya%20tentang%20Overhaul%20Gearbox%20$nameCapital`"[^>]*onclick=`"[^`"]*`"", "href=`"https://wa.me/60102020723?text=Model%20Kereta%3A%20$displayName%0A%0AHi%2C%20saya%20nak%20bertanya%20tentang%20Overhaul%20Gearbox.`""
-    $content = $content -replace "href=`"https://wa\.me/60102020723\?text=Saya%20nak%20tanya%20tentang%20Servis%20Minyak%20Gearbox%20$nameCapital`"[^>]*onclick=`"[^`"]*`"", "href=`"https://wa.me/60102020723?text=Model%20Kereta%3A%20$displayName%0A%0AHi%2C%20saya%20nak%20bertanya%20tentang%20Servis%20Minyak%20Gearbox.`""
-    $content = $content -replace "href=`"https://wa\.me/60102020723\?text=Saya%20nak%20book%20Diagnosis%20Gearbox%20$nameCapital%20percuma`"[^>]*onclick=`"[^`"]*`"", "href=`"https://wa.me/60102020723?text=Model%20Kereta%3A%20$displayName%0A%0AHi%2C%20saya%20nak%20bertanya%20tentang%20Diagnosis%20Gearbox.`""
-    $content = $content -replace "href=`"https://wa\.me/60102020723\?text=Saya%20nak%20tanya%20tentang%20servis%20lain%20untuk%20$nameCapital`"[^>]*onclick=`"[^`"]*`"", "href=`"https://wa.me/60102020723?text=Model%20Kereta%3A%20$displayName%0A%0AHi%2C%20saya%20nak%20bertanya%20tentang%20Lain-lain%20Servis.`""
+    $content = $content -replace "href=`"https://wa\.me/60102020723\?text=Saya%20nak%20tanya%20tentang%20Overhaul%20Gearbox%20$nameCapital`"[^>]*onclick=`"[^`"]*`"", "href=`"https://wa.me/601131051677?text=Model%20Kereta%3A%20$displayName%0A%0AHi%2C%20saya%20nak%20bertanya%20tentang%20Overhaul%20Gearbox.`""
+    $content = $content -replace "href=`"https://wa\.me/60102020723\?text=Saya%20nak%20tanya%20tentang%20Servis%20Minyak%20Gearbox%20$nameCapital`"[^>]*onclick=`"[^`"]*`"", "href=`"https://wa.me/601131051677?text=Model%20Kereta%3A%20$displayName%0A%0AHi%2C%20saya%20nak%20bertanya%20tentang%20Servis%20Minyak%20Gearbox.`""
+    $content = $content -replace "href=`"https://wa\.me/60102020723\?text=Saya%20nak%20book%20Diagnosis%20Gearbox%20$nameCapital%20percuma`"[^>]*onclick=`"[^`"]*`"", "href=`"https://wa.me/601131051677?text=Model%20Kereta%3A%20$displayName%0A%0AHi%2C%20saya%20nak%20bertanya%20tentang%20Diagnosis%20Gearbox.`""
+    $content = $content -replace "href=`"https://wa\.me/60102020723\?text=Saya%20nak%20tanya%20tentang%20servis%20lain%20untuk%20$nameCapital`"[^>]*onclick=`"[^`"]*`"", "href=`"https://wa.me/601131051677?text=Model%20Kereta%3A%20$displayName%0A%0AHi%2C%20saya%20nak%20bertanya%20tentang%20Lain-lain%20Servis.`""
     
     # Add button CSS
     $content = $content -replace '(\.service-btn \{[^}]*margin-top: 8px;)', "`$1`n            border: none;`n            cursor: pointer;`n            font-family: inherit;"

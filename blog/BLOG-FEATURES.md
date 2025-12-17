@@ -277,7 +277,7 @@ Footer      →  Contact options (last resort)
 ### 2. **WhatsApp Integration**
 ```javascript
 // Pre-filled message based on context
-https://wa.me/60102020723?text=Saya%20baca%20artikel%20tentang%20CVT
+https://wa.me/601131051677?text=Saya%20baca%20artikel%20tentang%20CVT
 ```
 - Removes friction (pre-filled text)
 - Context-aware (mentions article)

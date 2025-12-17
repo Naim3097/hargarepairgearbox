@@ -1,6 +1,6 @@
 // Perodua Brand Page Script
 const BRAND_NAME = "Perodua";
-const WHATSAPP_NUMBER = "60102020723";
+const WHATSAPP_NUMBER = "601131051677";
 
 // Mobile menu toggle
 function toggleMobileMenu() {

@@ -85,7 +85,7 @@ function handleFormSubmit(event) {
         `Boleh bagi anggaran harga & punca masalah?`;
     
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappURL = `https://wa.me/60102020723?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/601131051677?text=${encodedMessage}`;
     
     // Show success message
     document.getElementById('gearboxForm').style.display = 'none';
@@ -150,7 +150,7 @@ function handleBrandFormSubmit(event) {
         `Boleh bagi anggaran harga & punca masalah?`;
     
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappURL = `https://wa.me/60102020723?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/601131051677?text=${encodedMessage}`;
     
     // Show success message
     document.getElementById('brandForm').style.display = 'none';
@@ -190,7 +190,7 @@ function handleBlogFormSubmit(event) {
         `Boleh bagi anggaran harga & punca masalah?`;
     
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappURL = `https://wa.me/60102020723?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/601131051677?text=${encodedMessage}`;
     
     // Show success message
     document.getElementById('blogForm').style.display = 'none';
