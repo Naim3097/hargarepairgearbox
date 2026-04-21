@@ -1,6 +1,102 @@
 {
   "posts": [
     {
+      "id": "pakej-servis-gearbox-terbaik-malaysia",
+      "title": "Pakej Servis Gearbox Terbaik Malaysia 2026 — Perbandingan Harga Lengkap",
+      "slug": "pakej-servis-gearbox-terbaik-malaysia",
+      "excerpt": "Cari pakej servis gearbox terbaik Malaysia 2026? Kami bandingkan harga, apa yang termasuk, dan kenapa pakej dengan OBD2 percuma adalah pilihan terpintar.",
+      "category": "Pricing",
+      "author": "One X Transmission",
+      "date": "2026-04-21",
+      "readTime": "8 min",
+      "image": "https://images.unsplash.com/photo-1551522435-a13afa10f103?w=1200&q=80",
+      "featured": true,
+      "tags": [
+        "Pricing",
+        "Pakej",
+        "Comparison",
+        "OBD2",
+        "2026"
+      ]
+    },
+    {
+      "id": "harga-servis-gearbox-myvi-city-vios",
+      "title": "Harga Servis Gearbox Myvi, City & Vios 2026 — ATF + Penapis Lengkap",
+      "slug": "harga-servis-gearbox-myvi-city-vios",
+      "excerpt": "Harga servis gearbox Myvi, Honda City dan Toyota Vios 2026. Perbandingan kos ATF dan penapis untuk model paling popular di Malaysia.",
+      "category": "Car Specific",
+      "author": "One X Transmission",
+      "date": "2026-04-17",
+      "readTime": "6 min",
+      "image": "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=1200&q=80",
+      "featured": true,
+      "tags": [
+        "Myvi",
+        "Honda City",
+        "Toyota Vios",
+        "Pricing",
+        "ATF",
+        "2026"
+      ]
+    },
+    {
+      "id": "harga-servis-atf-gearbox-2026",
+      "title": "Harga Servis Minyak ATF Gearbox 2026 — Jangan Bayar Mahal Sebelum Baca Ni",
+      "slug": "harga-servis-atf-gearbox-2026",
+      "excerpt": "Harga servis minyak ATF gearbox di Malaysia 2026. Bandingkan harga workshop biasa vs pakej lengkap RM439 yang termasuk peranti OBD2 PERCUMA bernilai RM150.",
+      "category": "Pricing",
+      "author": "One X Transmission",
+      "date": "2026-04-14",
+      "readTime": "7 min",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
+      "featured": false,
+      "tags": [
+        "ATF",
+        "Pricing",
+        "2026",
+        "OBD2",
+        "Malaysia"
+      ]
+    },
+    {
+      "id": "servis-atf-vs-overhaul-gearbox",
+      "title": "Servis ATF vs Overhaul Gearbox — Bila Perlu Buat Masing-Masing?",
+      "slug": "servis-atf-vs-overhaul-gearbox",
+      "excerpt": "Servis ATF atau overhaul gearbox? Panduan lengkap untuk bantu anda buat keputusan yang betul dan jimat wang. Termasuk perbandingan kos dan checklist keputusan.",
+      "category": "Education",
+      "author": "One X Transmission",
+      "date": "2026-04-10",
+      "readTime": "8 min",
+      "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&q=80",
+      "featured": false,
+      "tags": [
+        "ATF",
+        "Overhaul",
+        "Decision Guide",
+        "Education",
+        "CVT"
+      ]
+    },
+    {
+      "id": "kenapa-obd2-penting-servis-gearbox",
+      "title": "Kenapa OBD2 Penting Sebelum Servis Gearbox? (Ramai Tak Tahu Ini)",
+      "slug": "kenapa-obd2-penting-servis-gearbox",
+      "excerpt": "OBD2 bukan sekadar untuk clear warning light. Ia boleh menyelamatkan gearbox anda dari kerosakan ribuan ringgit. Ketahui cara ia digunakan dalam servis gearbox.",
+      "category": "Education",
+      "author": "One X Transmission",
+      "date": "2026-04-07",
+      "readTime": "7 min",
+      "image": "https://images.unsplash.com/photo-1485463611174-f302f6a5c1c9?w=1200&q=80",
+      "featured": false,
+      "tags": [
+        "OBD2",
+        "Diagnosis",
+        "Education",
+        "BYKI",
+        "CVT"
+      ]
+    },
+    {
       "id": "cara-maintain-gearbox-cvt",
       "title": "Cara Maintain Gearbox CVT Supaya Tahan Lama",
       "slug": "cara-maintain-gearbox-cvt",
@@ -9,9 +105,15 @@
       "author": "One X Transmission",
       "date": "2025-11-15",
       "readTime": "5 min",
-      "image": "../asset/general-images/Servis Minyak Gearbox.png",
+      "image": "https://images.unsplash.com/photo-1517524206127-48bbd363f3d7?w=1200&q=80",
       "featured": true,
-      "tags": ["CVT", "Maintenance", "Honda", "Perodua", "Nissan"]
+      "tags": [
+        "CVT",
+        "Maintenance",
+        "Honda",
+        "Perodua",
+        "Nissan"
+      ]
     },
     {
       "id": "tanda-gearbox-nak-rosak",
@@ -22,9 +124,13 @@
       "author": "One X Transmission",
       "date": "2025-11-10",
       "readTime": "6 min",
-      "image": "../asset/general-images/Diagnosis Gearbox.jpeg",
+      "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&q=80",
       "featured": true,
-      "tags": ["Diagnosis", "Preventive", "Symptoms"]
+      "tags": [
+        "Diagnosis",
+        "Preventive",
+        "Symptoms"
+      ]
     },
     {
       "id": "bila-tukar-minyak-gearbox",
@@ -35,9 +141,13 @@
       "author": "One X Transmission",
       "date": "2025-11-05",
       "readTime": "7 min",
-      "image": "../asset/general-images/Servis Minyak Gearbox.png",
+      "image": "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=1200&q=80",
       "featured": false,
-      "tags": ["ATF", "Maintenance", "Service Interval"]
+      "tags": [
+        "ATF",
+        "Maintenance",
+        "Service Interval"
+      ]
     },
     {
       "id": "perbezaan-cvt-vs-auto",
@@ -48,9 +158,14 @@
       "author": "One X Transmission",
       "date": "2025-11-01",
       "readTime": "8 min",
-      "image": "../asset/general-images/Overhaul Gearbox.jpeg",
+      "image": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=1200&q=80",
       "featured": false,
-      "tags": ["CVT", "Automatic", "Comparison", "Buying Guide"]
+      "tags": [
+        "CVT",
+        "Automatic",
+        "Comparison",
+        "Buying Guide"
+      ]
     },
     {
       "id": "harga-overhaul-vs-recon",
@@ -61,9 +176,14 @@
       "author": "One X Transmission",
       "date": "2025-10-28",
       "readTime": "6 min",
-      "image": "../asset/general-images/Overhaul Gearbox.jpeg",
+      "image": "https://images.unsplash.com/photo-1486006920555-c77dcf18193c?w=1200&q=80",
       "featured": false,
-      "tags": ["Pricing", "Overhaul", "Recon", "Decision Guide"]
+      "tags": [
+        "Pricing",
+        "Overhaul",
+        "Recon",
+        "Decision Guide"
+      ]
     },
     {
       "id": "masalah-gearbox-myvi",
@@ -74,9 +194,14 @@
       "author": "One X Transmission",
       "date": "2025-10-25",
       "readTime": "7 min",
-      "image": "../asset/general-images/Diagnosis Gearbox.jpeg",
+      "image": "https://images.unsplash.com/photo-1530046339160-ce3e530c7d2f?w=1200&q=80",
       "featured": true,
-      "tags": ["Perodua", "Myvi", "Common Issues", "Auto Gearbox"]
+      "tags": [
+        "Perodua",
+        "Myvi",
+        "Common Issues",
+        "Auto Gearbox"
+      ]
     }
   ],
   "categories": [
@@ -95,19 +220,19 @@
     {
       "name": "Education",
       "slug": "education",
-      "count": 1,
+      "count": 3,
       "description": "Panduan dan pengetahuan gearbox"
     },
     {
       "name": "Pricing",
       "slug": "pricing",
-      "count": 1,
+      "count": 3,
       "description": "Harga dan kos repair gearbox"
     },
     {
       "name": "Car Specific",
       "slug": "car-specific",
-      "count": 1,
+      "count": 2,
       "description": "Panduan mengikut model kereta"
     }
   ]

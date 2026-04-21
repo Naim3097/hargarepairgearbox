@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One X Transmission — Promo Modal</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<style>
+  /* ──────────────────────────────────────────────
+     PROMO MODAL — One X Transmission
+     Standalone embed. Drop <style> + markup
+     + <script> into any page (before </body>).
+
+     Design system:
+       Font: Satoshi
+       Colors: #AB2020 (brand red), #0A0A0A bg, neutrals
+       Corners: sharp on desktop, 12px on mobile
+       No gradients, no shadows, no glow
+       Easing: cubic-bezier(0, 0.4, 0, 1)
+       Durations: 334ms fast, 667ms standard
+     ────────────────────────────────────────────── */
+
+  *,*::before,*::after{box-sizing:border-box}
+
+  /* ── Backdrop ── */
+  .onex-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 667ms cubic-bezier(0, 0.4, 0, 1);
+    padding: 12px;
+    font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .onex-modal-backdrop.active {
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* ── Modal Card ── */
+  .onex-modal {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #0A0A0A;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    transform: translateY(24px);
+    opacity: 0;
+    transition: transform 667ms cubic-bezier(0, 0.4, 0, 1),
+                opacity 667ms cubic-bezier(0, 0.4, 0, 1);
+  }
+
+  .onex-modal-backdrop.active .onex-modal {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* ── Close Button ── */
+  .onex-modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #999;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 334ms cubic-bezier(0, 0.4, 0, 1);
+  }
+
+  .onex-modal-close:hover {
+    border-color: #AB2020;
+    color: #fff;
+  }
+
+  /* ── Hero Image ── */
+  .onex-modal-hero {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    background: #000;
+  }
+
+  .onex-modal-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ── Overline (brand pattern) ── */
+  .onex-modal-overline {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #AB2020;
+    line-height: 1.4;
+  }
+
+  /* ── Content ── */
+  .onex-modal-content {
+    padding: 12px 12px 14px;
+  }
+
+  /* ── Divider accent ── */
+  .onex-modal-divider {
+    width: 32px;
+    height: 1px;
+    background: #AB2020;
+    margin: 6px 0 8px;
+  }
+
+  /* Pricing Row */
+  .onex-modal-pricing {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 2px;
+  }
+
+  .onex-modal-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+  }
+
+  .onex-modal-original {
+    font-size: 0.8rem;
+    color: #555;
+    text-decoration: line-through;
+  }
+
+  /* Title */
+  .onex-modal-title {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #bbb;
+    margin: 2px 0 8px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  /* ── Included items — gap-px border trick ── */
+  .onex-modal-items {
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin-bottom: 12px;
+  }
+
+  .onex-modal-item {
+    background: #0A0A0A;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .onex-modal-item-label {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #bbb;
+    line-height: 1.5;
+  }
+
+  .onex-modal-item-tag {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #AB2020;
+    padding: 2px 8px;
+    background: rgba(171, 32, 32, 0.1);
+    flex-shrink: 0;
+  }
+
+  /* ── CTA ── */
+  .onex-modal-cta {
+    display: block;
+    width: 100%;
+    padding: 10px 24px;
+    background: #AB2020;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    transition: background 334ms cubic-bezier(0, 0.4, 0, 1);
+  }
+
+  .onex-modal-cta:hover {
+    background: #8A1A1A;
+  }
+
+  .onex-modal-cta:active {
+    transform: scale(0.98);
+  }
+
+  /* ── Footer ── */
+  .onex-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    gap: 8px;
+  }
+
+  .onex-modal-footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .onex-modal-footer-label {
+    font-size: 9px;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+  }
+
+  .onex-modal-footer-value {
+    font-size: 0.8rem;
+    color: #ddd;
+    font-weight: 500;
+  }
+
+  .onex-modal-footer-value--red {
+    color: #AB2020;
+  }
+
+  /* ── Desktop: side-by-side layout ── */
+  @media (min-width: 769px) {
+    .onex-modal-backdrop {
+      padding: 16px;
+    }
+
+    .onex-modal {
+      max-width: 820px;
+      border-radius: 0;
+    }
+
+    .onex-modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .onex-modal-hero {
+      height: 100%;
+    }
+
+    .onex-modal-close {
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+    }
+
+    .onex-modal-content {
+      padding: 32px;
+    }
+
+    .onex-modal-overline { font-size: 13px; }
+    .onex-modal-divider { margin: 12px 0 16px; }
+    .onex-modal-pricing { gap: 12px; margin-bottom: 4px; }
+    .onex-modal-price { font-size: 2rem; }
+    .onex-modal-original { font-size: 0.92rem; }
+    .onex-modal-title { font-size: 1.125rem; margin: 4px 0 20px; }
+    .onex-modal-items { margin-bottom: 24px; }
+    .onex-modal-item { padding: 10px 16px; }
+    .onex-modal-item-label { font-size: 0.92rem; }
+    .onex-modal-cta { padding: 16px 32px; font-size: 1rem; }
+    .onex-modal-footer { margin-top: 20px; padding-top: 20px; }
+    .onex-modal-footer-label { font-size: 11px; }
+    .onex-modal-footer-value { font-size: 0.92rem; }
+  }
+
+  /* ── Reduced Motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    .onex-modal-backdrop,
+    .onex-modal,
+    .onex-modal-close,
+    .onex-modal-cta {
+      transition: none;
+    }
+  }
+</style>
+</head>
+
+<body style="margin:0; min-height:100vh; background:#000;">
+  <!-- ════════════════════════════════════════════
+       PROMO MODAL — Copy everything below into
+       any HTML page (before </body>).
+       Update the image src and CTA href as needed.
+       ════════════════════════════════════════════ -->
+
+  <div class="onex-modal-backdrop" id="onexPromoModal">
+    <div class="onex-modal" role="dialog" aria-modal="true" aria-labelledby="onex-modal-heading">
+
+      <!-- Close -->
+      <button class="onex-modal-close" id="onexModalClose" aria-label="Tutup">&times;</button>
+
+      <div class="onex-modal-grid">
+        <!-- Hero Image -->
+        <div class="onex-modal-hero">
+          <img
+            src="images/asset promotion/PROMO 1 B.jpg"
+            alt="Pakej Servis ATF Gearbox RM439 — One X Transmission"
+            loading="eager"
+          />
+        </div>
+
+        <!-- Content -->
+        <div class="onex-modal-content">
+          <span class="onex-modal-overline">Pakej Promosi</span>
+          <div class="onex-modal-divider"></div>
+
+          <div class="onex-modal-pricing">
+            <span class="onex-modal-price">RM 439</span>
+            <span class="onex-modal-original">RM 580</span>
+          </div>
+
+          <h2 class="onex-modal-title" id="onex-modal-heading">
+            Pakej Servis ATF Gearbox
+          </h2>
+
+          <div class="onex-modal-items">
+            <div class="onex-modal-item">
+              <span class="onex-modal-item-label">Minyak ATF Duckhams Dexron VI</span>
+            </div>
+            <div class="onex-modal-item">
+              <span class="onex-modal-item-label">Penapis Gearbox Baru</span>
+            </div>
+            <div class="onex-modal-item">
+              <span class="onex-modal-item-label">OBD2 Diagnostic Device</span>
+              <span class="onex-modal-item-tag">Percuma</span>
+            </div>
+          </div>
+
+          <a href="https://onextransmission.com/ms/packages" class="onex-modal-cta" id="onexModalCta">
+            Lihat Pakej Penuh
+          </a>
+
+          <div class="onex-modal-footer">
+            <div class="onex-modal-footer-item">
+              <span class="onex-modal-footer-label">Deposit</span>
+              <span class="onex-modal-footer-value">RM 50</span>
+            </div>
+            <div class="onex-modal-footer-item">
+              <span class="onex-modal-footer-label">Jimat</span>
+              <span class="onex-modal-footer-value">RM 141</span>
+            </div>
+            <div class="onex-modal-footer-item">
+              <span class="onex-modal-footer-label">Terhad</span>
+              <span class="onex-modal-footer-value onex-modal-footer-value--red">100 unit sahaja</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       SCRIPT — handles open/close + localStorage
+       ════════════════════════════════════════════ -->
+  <script>
+  (function () {
+    var STORAGE_KEY = 'onex_promo_dismissed';
+    var SHOW_DELAY  = 3000;   // ms before modal appears
+    var COOLDOWN    = 3;      // days before showing again after dismiss
+
+    var backdrop = document.getElementById('onexPromoModal');
+    var closeBtn = document.getElementById('onexModalClose');
+
+    if (!backdrop || !closeBtn) return;
+
+    function isDismissed() {
+      try {
+        var raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return false;
+        var ts = parseInt(raw, 10);
+        if (isNaN(ts)) return false;
+        var daysPassed = (Date.now() - ts) / (1000 * 60 * 60 * 24);
+        return daysPassed < COOLDOWN;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function dismiss() {
+      try { localStorage.setItem(STORAGE_KEY, String(Date.now())); } catch (e) {}
+      backdrop.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function openModal() {
+      backdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    closeBtn.addEventListener('click', dismiss);
+
+    backdrop.addEventListener('click', function (e) {
+      if (e.target === backdrop) dismiss();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && backdrop.classList.contains('active')) dismiss();
+    });
+
+    if (!isDismissed()) {
+      setTimeout(openModal, SHOW_DELAY);
+    }
+  })();
+  </script>
+</body>
+</html>

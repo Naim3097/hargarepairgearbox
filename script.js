@@ -204,6 +204,101 @@ function handleBlogFormSubmit(event) {
     return false;
 }
 
+// ── Promo Modal ────────────────────────────────────────────────────────────
+(function () {
+    // Load Satoshi font (used by the modal)
+    if (!document.querySelector('link[href*="fontshare"]')) {
+        var fontLink = document.createElement('link');
+        fontLink.rel = 'stylesheet';
+        fontLink.href = 'https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap';
+        document.head.appendChild(fontLink);
+    }
+
+    // Inject modal markup
+    var wrapper = document.createElement('div');
+    wrapper.innerHTML = '<div class="onex-modal-backdrop" id="onexPromoModal">'
+        + '<div class="onex-modal" role="dialog" aria-modal="true" aria-labelledby="onex-modal-heading">'
+        + '<button class="onex-modal-close" id="onexModalClose" aria-label="Tutup">&times;</button>'
+        + '<div class="onex-modal-grid">'
+        + '<div class="onex-modal-hero">'
+        + '<img src="/promo.png" alt="Pakej Servis ATF Gearbox RM439 — One X Transmission" loading="eager">'
+        + '</div>'
+        + '<div class="onex-modal-content">'
+        + '<span class="onex-modal-overline">Pakej Promosi</span>'
+        + '<div class="onex-modal-divider"></div>'
+        + '<div class="onex-modal-pricing">'
+        + '<span class="onex-modal-price">RM 439</span>'
+        + '<span class="onex-modal-original">RM 580</span>'
+        + '</div>'
+        + '<h2 class="onex-modal-title" id="onex-modal-heading">Pakej Servis ATF Gearbox</h2>'
+        + '<div class="onex-modal-items">'
+        + '<div class="onex-modal-item"><span class="onex-modal-item-label">Minyak ATF Duckhams Dexron VI</span></div>'
+        + '<div class="onex-modal-item"><span class="onex-modal-item-label">Penapis Gearbox Baru</span></div>'
+        + '<div class="onex-modal-item"><span class="onex-modal-item-label">OBD2 Diagnostic Device</span><span class="onex-modal-item-tag">Percuma</span></div>'
+        + '</div>'
+        + '<a href="https://www.onextransmission.com/ms/packages" class="onex-modal-cta" id="onexModalCta" target="_blank" rel="noopener">Lihat Pakej Penuh</a>'
+        + '<div class="onex-modal-footer">'
+        + '<div class="onex-modal-footer-item"><span class="onex-modal-footer-label">Deposit</span><span class="onex-modal-footer-value">RM 50</span></div>'
+        + '<div class="onex-modal-footer-item"><span class="onex-modal-footer-label">Jimat</span><span class="onex-modal-footer-value">RM 141</span></div>'
+        + '<div class="onex-modal-footer-item"><span class="onex-modal-footer-label">Terhad</span><span class="onex-modal-footer-value onex-modal-footer-value--red">100 unit sahaja</span></div>'
+        + '</div>'
+        + '</div>'
+        + '</div>'
+        + '</div>'
+        + '</div>';
+    document.body.appendChild(wrapper.firstElementChild);
+
+    var STORAGE_KEY = 'onex_promo_dismissed';
+    var SHOW_DELAY  = 3000;
+    var COOLDOWN    = 3; // days
+
+    var backdrop = document.getElementById('onexPromoModal');
+    var closeBtn = document.getElementById('onexModalClose');
+    var ctaBtn   = document.getElementById('onexModalCta');
+
+    if (!backdrop || !closeBtn) return;
+
+    function isDismissed() {
+        try {
+            var raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) return false;
+            var ts = parseInt(raw, 10);
+            if (isNaN(ts)) return false;
+            return (Date.now() - ts) / (1000 * 60 * 60 * 24) < COOLDOWN;
+        } catch (e) { return false; }
+    }
+
+    function dismiss() {
+        try { localStorage.setItem(STORAGE_KEY, String(Date.now())); } catch (e) {}
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function openModal() {
+        backdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+    }
+
+    closeBtn.addEventListener('click', dismiss);
+    backdrop.addEventListener('click', function (e) {
+        if (e.target === backdrop) dismiss();
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && backdrop.classList.contains('active')) dismiss();
+    });
+
+    if (ctaBtn) {
+        ctaBtn.addEventListener('click', function () {
+            if (typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout', { content_name: 'Promo Modal CTA', value: 439, currency: 'MYR' });
+            if (typeof dataLayer !== 'undefined') dataLayer.push({ event: 'promo_modal_cta_click' });
+            dismiss();
+        });
+    }
+
+    if (!isDismissed()) setTimeout(openModal, SHOW_DELAY);
+})();
+
 // Track WhatsApp click
 function trackWhatsAppClick() {
     if (typeof fbq !== 'undefined') {
