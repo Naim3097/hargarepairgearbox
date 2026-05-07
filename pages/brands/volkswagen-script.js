@@ -1,6 +1,6 @@
 // Volkswagen Brand Page Script
 const BRAND_NAME = "Volkswagen";
-const WHATSAPP_NUMBER = "601131051677";
+const WHATSAPP_NUMBER = "60102020723";
 
 // Mobile menu toggle
 function toggleMobileMenu() {
