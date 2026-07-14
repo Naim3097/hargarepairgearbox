@@ -32,7 +32,7 @@ blog/
   "slug": "your-post-slug",
   "excerpt": "Short description (150-200 characters)",
   "category": "Maintenance|Diagnosis|Education|Pricing|Car Specific",
-  "author": "One X Transmission",
+  "author": "Harga Repair Gearbox Malaysia",
   "date": "2025-11-20",
   "readTime": "5 min",
   "image": "../asset/general-images/[image-name].png",
@@ -267,6 +267,6 @@ Model-specific guides (Myvi, Honda City, X50, etc.)
 
 ## Support
 For technical issues or questions:
-- WhatsApp: +60 10-202 0723
+- WhatsApp: +60 16-333 6301
 - Reference this README when adding content
 - Test all changes on local before deploying

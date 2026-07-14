@@ -93,7 +93,7 @@
 ```json
 {
   "businessName": "Harga Repair Gearbox",
-  "telephone": "+60 10-202 0723",
+  "telephone": "+60 16-333 6301",
   "email": "info@hargarepairgearbox.com",
   "address": {
     "addressCountry": "MY",

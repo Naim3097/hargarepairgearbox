@@ -1,8 +1,10 @@
 # SEO + Promo Package Playbook
 
+> **STATUS (July 2026): RETIRED.** The promo modal was removed from this site as part of the ecosystem rebrand (One X Transmission branding fully retired). Conversion paths are now: WhatsApp `wa.me/60163336301` + contextual links into `gearboxspecialist.com/ms/...`. This document is kept for historical reference only — do not re-implement the modal.
+
 A reusable playbook for funneling organic traffic from a static site into a single **promo/packages** money page.
 
-> **Context (this site):** static HTML site for a Malaysian gearbox repair brand. Money page = `https://www.onextransmission.com/ms/packages`. The same pattern applies to any site: replace the topic + money URL.
+> **Context (this site):** static HTML site for a Malaysian gearbox repair brand. Money page = `https://gearboxspecialist.com/ms/costs`. The same pattern applies to any site: replace the topic + money URL.
 
 ---
 
@@ -12,12 +14,12 @@ A reusable playbook for funneling organic traffic from a static site into a sing
 
 **Files involved:**
 - `script.js` → IIFE that injects modal HTML, handles open/close, fires analytics
-- `styles.css` → `.onex-modal-backdrop` / `.onex-modal` rules (lines ~3518–3829 here)
+- `styles.css` → `.promo-modal-backdrop` / `.promo-modal` rules (lines ~3518–3829 here)
 - Each entry HTML (`index.html`, brand pages, etc.) → just include `<script src="script.js" defer></script>`
 
 **Behavior rules (important — these are what make it not annoying):**
 - Delay open by ~3000ms after page load (let user read first)
-- Save dismissal in `localStorage` with a 3-day cooldown key (e.g. `onex_promo_dismissed`)
+- Save dismissal in `localStorage` with a 3-day cooldown key (e.g. `hrg_promo_dismissed`)
 - Single CTA button → opens money page in a new tab (`target="_blank" rel="noopener"`)
 - Fire analytics on CTA click: Meta Pixel `fbq('track','InitiateCheckout')` + GTM custom event (`promo_modal_cta_click`)
 - Respect `prefers-reduced-motion`
@@ -28,7 +30,7 @@ A reusable playbook for funneling organic traffic from a static site into a sing
 - ≤480px: full-width bottom sheet that slides up (`align-items: flex-end`), max-height 85vh
 
 **Replication checklist:**
-1. Copy the IIFE block from `script.js` (search for `onex-modal-backdrop`)
+1. Copy the IIFE block from `script.js` (search for `promo-modal-backdrop`)
 2. Copy the modal CSS block from `styles.css`
 3. Swap the hero image, headline, subheadline, CTA label, and money URL
 4. Rename the localStorage key so it doesn't collide with other sites

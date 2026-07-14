@@ -26,7 +26,7 @@ Open `blog/blog-data.json` and add your new post in the `"posts"` array:
   "slug": "your-article-slug",
   "excerpt": "Short 150-200 character description that appears on blog cards",
   "category": "Maintenance",
-  "author": "One X Transmission",
+  "author": "Harga Repair Gearbox Malaysia",
   "date": "2025-11-20",
   "readTime": "5 min",
   "image": "../asset/general-images/your-image.png",
@@ -44,7 +44,7 @@ Open `blog/blog-data.json` and add your new post in the `"posts"` array:
 | `slug` | URL-friendly version (lowercase, dashes) | `"cara-servis-gearbox"` |
 | `excerpt` | Short description (150-200 chars) | `"Panduan lengkap servis gearbox..."` |
 | `category` | Must match existing categories | `"Maintenance"`, `"Diagnosis"`, `"Education"`, `"Pricing"`, `"Car Specific"` |
-| `author` | Author name | `"One X Transmission"` |
+| `author` | Author name | `"Harga Repair Gearbox Malaysia"` |
 | `date` | Publish date (YYYY-MM-DD) | `"2025-11-20"` |
 | `readTime` | Estimated reading time | `"5 min"`, `"8 min"` |
 | `image` | Featured image path | `"../asset/general-images/image.png"` |

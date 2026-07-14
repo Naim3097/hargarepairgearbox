@@ -147,4 +147,4 @@ All pages are fully responsive:
 
 **Last Updated:** November 19, 2025  
 **Template Version:** 1.0  
-**Maintained by:** One X Transmission Team
+**Maintained by:** Gearbox Specialist Malaysia Team

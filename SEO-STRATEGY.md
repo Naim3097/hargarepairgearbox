@@ -2,7 +2,7 @@
 
 **Website:** hargarepairgearbox.com  
 **Target Market:** Malaysian car owners (25–45 years old)  
-**Business:** One X Transmission (Gearbox Specialist)  
+**Business:** Gearbox Specialist Malaysia (MNA Dynamic Torque, Shah Alam & IM Dynamic Torque, Pulau Pinang)  
 **Goal:** Generate qualified gearbox repair leads via organic search + paid ads
 
 ---
@@ -122,7 +122,7 @@ hargarepairgearbox.com/
 {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
-  "name": "One X Transmission",
+  "name": "Harga Repair Gearbox Malaysia",
   "description": "Pakar pembaikan gearbox CVT, automatik & manual untuk semua jenama kereta",
   "url": "https://hargarepairgearbox.com",
   "telephone": "+60123456789",
@@ -172,7 +172,7 @@ hargarepairgearbox.com/
   "serviceType": "Gearbox Overhaul & Repair",
   "provider": {
     "@type": "AutoRepair",
-    "name": "One X Transmission"
+    "name": "Harga Repair Gearbox Malaysia"
   },
   "areaServed": "Malaysia",
   "offers": {
@@ -264,7 +264,7 @@ Real workshop photo showing gearbox disassembly (Honda/Myvi preferred for famili
 
 **Post-Submit:**
 - Success message: "Terima kasih! Kami akan WhatsApp anda dalam 5 minit dengan anggaran harga & punca masalah."
-- Auto-trigger WhatsApp message to One X Transmission
+- Auto-trigger WhatsApp message to the workshop network
 - Track as Lead conversion in Meta Pixel + GA4
 
 **Why this matters:** Form BEFORE pricing table = captures hot leads. Form AFTER pricing = captures informed leads. Have both.
@@ -718,7 +718,7 @@ gtag('event', 'search', { search_term: 'honda city' });
 
 #### Google Business Profile (Critical)
 **Setup:**
-1. Claim "One X Transmission" listing
+1. Claim workshop GBP listings (MNA Dynamic Torque / IM Dynamic Torque)
 2. Add accurate address, phone, hours
 3. Upload 20+ real workshop photos
 4. Post weekly updates (new services, price updates, tips)
