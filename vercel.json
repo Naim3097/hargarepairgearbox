@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/:brand(honda|toyota|nissan|perodua|proton|bmw|mercedes|volkswagen)",
+      "destination": "/pages/brands/:brand"
+    },
+    {
+      "source": "/blog/:slug([a-z0-9\\-]+)",
+      "destination": "/blog/posts/:slug"
+    }
+  ]
+}
