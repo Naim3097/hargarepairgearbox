@@ -1,10 +1,10 @@
 # SEO + Promo Package Playbook
 
-> **STATUS (July 2026): RETIRED.** The promo modal was removed from this site as part of the ecosystem rebrand (One X Transmission branding fully retired). Conversion paths are now: WhatsApp `wa.me/60163336301` + contextual links into `gearboxspecialist.com/ms/...`. This document is kept for historical reference only — do not re-implement the modal.
+> **STATUS (July 2026): RETIRED.** The promo modal was removed from this site as part of the ecosystem rebrand (One X Transmission branding fully retired). Conversion paths are now: WhatsApp `wa.me/60163336301` + contextual links into `cvtspecialist.com/ms/...`. This document is kept for historical reference only — do not re-implement the modal.
 
 A reusable playbook for funneling organic traffic from a static site into a single **promo/packages** money page.
 
-> **Context (this site):** static HTML site for a Malaysian gearbox repair brand. Money page = `https://gearboxspecialist.com/ms/costs`. The same pattern applies to any site: replace the topic + money URL.
+> **Context (this site):** static HTML site for a Malaysian gearbox repair brand. Money page = `https://cvtspecialist.com/ms/costs`. The same pattern applies to any site: replace the topic + money URL.
 
 ---
 
